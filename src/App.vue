@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
-const hue = ref(200);
+const hue = ref(210);
 </script>
 
 <template>
@@ -30,7 +30,7 @@ const hue = ref(200);
   --hue: v-bind(hue);
   --bkg: var(--hue) 50% 94%;
   --text: var(--hue) 80% 20%;
-  --bkg-dark: var(--hue) 50% 13%;
+  --bkg-dark: var(--hue) 40% 10%;
   --text-dark: var(--hue) 80% 90%;
   background-color: hsl(var(--bkg));
   color: hsl(var(--text));
