@@ -21,11 +21,15 @@
 
 <style scoped>
 .dark {
-  background-color: hsl(var(--bkg-dark));
-  color: hsl(var(--text-dark));
+  --bkg: var(--bkg-dark);
+  --text: var(--text-dark);
+  background-color: hsl(var(--bkg));
+  color: hsl(var(--text));
 }
 
 .light {
+  --bkg: var(--bkg-light);
+  --text: var(--text-light);
   background-color: hsl(var(--bkg));
   color: hsl(var(--text));
 }

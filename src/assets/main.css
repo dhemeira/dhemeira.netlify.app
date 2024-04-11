@@ -54,8 +54,29 @@ html {
 .wrapper {
   min-height: 100vh;
 }
+
+.wrapper {
+  --hue: 210;
+  --bkg-light: var(--hue) 50% 94%;
+  --text-light: var(--hue) 80% 20%;
+  --bkg-dark: var(--hue) 40% 10%;
+  --text-dark: var(--hue) 80% 90%;
+  --bkg: var(--bkg-light);
+  --text: var(--text-light);
+  background-color: hsl(var(--bkg));
+  color: hsl(var(--text));
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+  .wrapper {
+    --bkg: var(--bkg-dark);
+    --text: var(--text-dark);
+  }
+}
+
+.router-link-exact-active {
+  @apply text-xl font-bold;
 }
